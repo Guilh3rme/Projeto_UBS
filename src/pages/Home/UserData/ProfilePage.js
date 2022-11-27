@@ -1,14 +1,12 @@
 import { View, Text } from "react-native";
-import styles from "../styles/styles";
+import styles from "../../../stylesGlobal";
 import { useNavigation } from "@react-navigation/native";
 
-const ProfilePage = () => {
+export default function ProfilePage() {
   const navigation = useNavigation();
   return (
     <View style={styles.background}>
       <Text> ProfilePage </Text>
     </View>
   );
-};
-
-export default ProfilePage;
+}

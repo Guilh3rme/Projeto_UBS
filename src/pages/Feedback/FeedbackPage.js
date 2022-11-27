@@ -1,14 +1,12 @@
 import { View, Text } from "react-native";
-import styles from "../styles/styles";
+import styles from "../../stylesGlobal";
 import { useNavigation } from "@react-navigation/native";
 
-const HomePage = () => {
+export default function FeedbackPage() {
   const navigation = useNavigation();
   return (
     <View style={styles.background}>
-      <Text> HomePage </Text>
+      <Text> FeedbackPage </Text>
     </View>
   );
-};
-
-export default HomePage;
+}
