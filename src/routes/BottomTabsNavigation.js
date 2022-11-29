@@ -4,6 +4,7 @@ import HomePage from "../pages/Home/HomePage";
 import FeedbackPage from "../pages/Feedback/FeedbackPage";
 import ExamsPage from "../pages/Home/Exams/ExamsPage";
 import ProfilePage from "../pages/Home/UserData/ProfilePage";
+import { Color } from "../colors";
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -12,7 +13,7 @@ export default function TabNavigation() {
     <Tab.Navigator
       screenOptions={({ route, navigation }) => ({
         tabBarLabel: navigation.isFocused() ? route.name : "",
-        tabBarIcon: ({ focused, color }) => {
+        tabBarIcon: ({ focused }) => {
           let iconName;
           if (route.name === "Home") {
             iconName = focused ? "home" : "home";
@@ -25,9 +26,10 @@ export default function TabNavigation() {
           } else if (route.name === "Feedback") {
             iconName = focused ? "message" : "message-outline";
           }
-          return <Icon name={iconName} size={26} color={color} />;
+          return <Icon name={iconName} size={26} color={Color.PhtaloGreen} />;
         },
       })}
+      barStyle={{ backgroundColor: Color.MaxBlueGreen }}
     >
       <Tab.Screen name="Home" component={HomePage} />
       <Tab.Screen name="Profile" component={ProfilePage} />

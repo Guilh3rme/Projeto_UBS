@@ -1,24 +1,24 @@
 import { View, Image, Alert, SafeAreaView } from "react-native";
-import styles from "../../stylesGlobal";
 import { useNavigation } from "@react-navigation/native";
 import { useState } from "react";
 
 import CustomInput from "../../shared/Input";
 import CustomButton from "../../shared/Button";
+import styles from "../../stylesGlobal";
 
 export default function LoginPage() {
   const navigation = useNavigation();
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
   return (
     <SafeAreaView style={styles.background}>
       <View>
-        <Image />
+        <Image style={{ width: 50, height: 50 }} />
       </View>
       <CustomInput
         placeholder={"Usuário ou Email"}
-        secureTextEntry={false}
-        onChange={(text) => setUsername(text)}
+        onChange={(text) => setEmail(text)}
       />
       <CustomInput
         placeholder={"Senha"}
@@ -29,7 +29,7 @@ export default function LoginPage() {
         <CustomButton
           title={"Entrar"}
           icon={"login"}
-          onPress={() => navigation.navigate("s_home")}
+          onPress={() => handleSubmitLogin}
         />
         <CustomButton
           title={"Cadastre-se"}

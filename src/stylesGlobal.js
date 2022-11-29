@@ -1,4 +1,5 @@
 import { Dimensions, StyleSheet } from "react-native";
+import { Color } from "./colors";
 
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
@@ -6,7 +7,7 @@ const windowHeight = Dimensions.get("window").height;
 const styles = StyleSheet.create({
   background: {
     flex: 1,
-    backgroundColor: "#8A8EEE",
+    backgroundColor: Color.LavenderBlue,
     alignItems: "center",
     justifyContent: "center",
   },
